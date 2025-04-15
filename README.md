@@ -2,4 +2,5 @@
 #asdsad
 
 
-sudo ln -s /opt/omd/sites/quantrimang/etc/apache/apache.conf /etc/apache2/conf-enabled/zzz-omd.conf
+netsh advfirewall set allprofiles state off
+New-NetFirewallRule -DisplayName "Allow CheckMK Agent" -Direction Inbound -Protocol TCP -LocalPort 6556 -Action Allow
