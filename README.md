@@ -2,10 +2,4 @@
 #asdsad
 
 
-# Proxy cho CheckMK
-ProxyPass /check_mk http://localhost:5000/mysite/check_mk/
-ProxyPassReverse /check_mk http://localhost:5000/mysite/check_mk/
-
-# Cho phép truy cập giao diện qua / (tùy chọn)
-ProxyPass / http://localhost:5000/mysite/
-ProxyPassReverse / http://localhost:5000/mysite/
+sudo ln -s /opt/omd/sites/quantrimang/etc/apache/apache.conf /etc/apache2/conf-enabled/zzz-omd.conf
