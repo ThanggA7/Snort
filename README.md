@@ -1,3 +1,3 @@
 # Snort + Rules
-# quanhluunguyn@gmail.com
-# vkvc rgfr gtth ydgd
+# 8175342300:AAGWjWbLA-hVRv58XMUoGGdXuJDK8u_UG6o
+# 7680591804
