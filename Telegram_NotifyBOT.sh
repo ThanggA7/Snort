@@ -1,6 +1,6 @@
 #!/bin/bash
 
-logs="/home/nhuthang/log-snort/alert"
+logs="/home/USER CUA BAN /log-snort/alert"
 initCount=0
 msg_caption="/tmp/telegram_msg_caption.txt"
 
