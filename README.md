@@ -19,3 +19,5 @@ sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-sn
 
 # 4. Mở 1 terminal khác để chạy bot gửi cảnh báo
 ./Telegram_NotifyBOT.sh
+```
+# LƯU Ý nhuthang phải thay bằng user mà bạn đang dùng ở máy của bạn.
