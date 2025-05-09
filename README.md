@@ -1,6 +1,21 @@
-# TẠO THƯ MỤC TRƯỚC KHI CHẠY : mkdir -p /home/nhuthang/log-snort
+# 🚨 Snort + Telegram Bot Alert System
 
+Hệ thống cảnh báo real-time khi phát hiện tấn công mạng thông qua Snort và gửi thông báo về Telegram Bot.
 
-# CHẠY : 'sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-snort' ĐỂ CHẠY SNORT
+---
 
-# SAU KHI CHẠY SNORT THÌ HÃY VÀO THƯ MỤC CHỨ BOT TELEGRAM GÕ ./
+## Cài đặt & Sử dụng
+
+```bash
+# 1. Tạo thư mục lưu log cho Snort
+mkdir -p /home/nhuthang/log-snort
+
+# 2. Cấp quyền thực thi cho bot Telegram
+cd /home/nhuthang/Snort-Bot-Telegram-Shell
+chmod +x Telegram_NotifyBOT.sh
+
+# 3. Mở 1 terminal để chạy Snort (để bắt gói)
+sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-snort
+
+# 4. Mở 1 terminal khác để chạy bot gửi cảnh báo
+./Telegram_NotifyBOT.sh
