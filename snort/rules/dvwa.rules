@@ -1,0 +1,14 @@
+# Rule 1: Phát hiện tấn công Ping Flood
+alert icmp any any -> $HOME_NET any (msg:"Ping Flood Attack"; dsize:0; itype:8; detection_filter: track by_src, count 50, seconds 1; sid:100001; classtype:attempted-dos;)
+
+# Rule 2: Phát hiện quét cổng từ bên ngoài
+alert tcp any any -> $HOME_NET any (msg:"Possible external port scan"; flags:S; detection_filter: track by_src, count 10, seconds 1; sid:100002; classtype:attempted-recon;)
+
+# Rule 3: Phát hiện tấn công Brute Force SSH
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"SSH Brute Force Attempt"; flow:to_server,established; content:"SSH"; pcre:"/SSH\-2\.0\-OpenSSH\-.*/"; detection_filter: track by_src, count 5, seconds 60; sid:100003; classtype:attempted-user;)
+
+# Rule 4: Phát hiện tấn công DoS qua HTTP
+alert tcp $EXTERNAL_NET any -> $HOME_NET 80 (msg:"HTTP DoS Attempt"; flow:to_server,established; content:"GET"; detection_filter: track by_src, count 100, seconds 60; sid:100004; classtype:attempted-dos;)
+
+# Rule 5: Phát hiện tấn công DNS Amplification
+alert udp $EXTERNAL_NET any -> $HOME_NET 53 (msg:"DNS Amplification Attack"; detection_filter: track by_src, count 200, seconds 10; sid:100005; classtype:attempted-dos;)
