@@ -22,5 +22,4 @@ sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-sn
 # LƯU Ý: nhuthang phải thay bằng user mà bạn đang dùng ở máy của bạn.
 
 
-https://discord.com/api/webhooks/1376514270518444092/0Fcoyt4AIeealum9mFategz2PkfIn08QEpeIEwwycDQVJ8XLZkIdVhvW8s3uWPzaFwEg
-https://discord.com/api/webhooks/1376539306302115931/njvSB8p0k80YSeXVojk42oYnTl-6yVCAxrEWojbn7X-GKSjud8LJlmK-k6B_Bd3d6U_u
+netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
