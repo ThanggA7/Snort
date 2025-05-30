@@ -23,3 +23,4 @@ sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-sn
 
 
 https://discord.com/api/webhooks/1377867021110349875/NAeWYT8zoPj9h3Ax5qo2_fFuQAoL3l9WRmkP_Tca3IwrJxyjFXM_ACjnEdG9JWrILris
+netsh advfirewall firewall add rule name="Allow ICMPv4-In" protocol=icmpv4:8,any dir=in action=allow
