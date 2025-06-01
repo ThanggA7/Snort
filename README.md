@@ -23,3 +23,7 @@ sudo snort -A full -q -i ens33 -c /etc/snort/snort.conf -l /home/nhuthang/log-sn
 
 
 w32tm /resync
+
+
+export http_proxy=http://91.103.120.39:80
+export https_proxy=http://91.103.120.39:80
