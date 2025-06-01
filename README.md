@@ -26,3 +26,4 @@ w32tm /resync
 
 
 Get-Service | Where-Object { $_.Name -like "*mk*" -or $_.DisplayName -like "*mk*" }
+omd status
