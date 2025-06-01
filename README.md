@@ -28,3 +28,4 @@ w32tm /resync
 export http_proxy=http://91.103.120.39:80
 export https_proxy=http://91.103.120.39:80
 curl -x http://91.103.120.39:80 https://api.telegram.org
+Get-Service checkmk_agent
